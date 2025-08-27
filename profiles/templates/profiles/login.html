@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 500px;">
+    <h2 class="mb-4">로그인</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success w-100">로그인</button>
+    </form>
+</div>
+{% endblock %}

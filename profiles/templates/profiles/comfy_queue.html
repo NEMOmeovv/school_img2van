@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>ComfyUI 작업 대기열</h2>
+
+{% if queue.error %}
+    <div class="alert alert-danger">{{ queue.error }}</div>
+{% else %}
+    <pre>{{ queue|safe }}</pre>
+{% endif %}
+{% endblock %}

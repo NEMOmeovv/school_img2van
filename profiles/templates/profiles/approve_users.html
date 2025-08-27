@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>가입 승인 대기 목록</h2>
+
+{% if pending_users %}
+    <table class="table table-bordered mt-4">
+        <thead>
+            <tr>
+                <th>아이디</th>
+                <th>이름</th>
+                <th>학교</th>
+                <th>전화번호</th>
+                <th>승인</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in pending_users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.full_name }}</td>
+                <td>{{ user.school }}</td>
+                <td>{{ user.phone }}</td>
+                <td>
+                    <form method="post" action="{% url 'approve_user' user.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success btn-sm">승인</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>승인 대기 중인 사용자가 없습니다.</p>
+{% endif %}
+
+{% endblock %}
