@@ -2,7 +2,7 @@
 
 정상적인 구동을 위해선,
 
-커스텀 모델이 들어가있는 이 [comfyUI]([https://github.com/NEMOmeovv/school_img2van](https://drive.google.com/file/d/1njXMFxzpSRK5DOdRrwSo2YyJhGNtIR7C/view?usp=drive_link)). 를 설치해야힘(근데 이런식으로 2차 수정, 공유가 라이센스 약관 위반인지는 잘 몰?루)
+커스텀 모델이 들어가있는 이 [comfyUI](https://drive.google.com/file/d/1njXMFxzpSRK5DOdRrwSo2YyJhGNtIR7C/view?usp=drive_link). 를 설치해야힘(근데 이런식으로 2차 수정, 공유가 라이센스 약관 위반인지는 잘 몰?루)
 
 코드 경로 수정이라던가,
 
